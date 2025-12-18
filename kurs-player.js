@@ -63,18 +63,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const typeIcons = {
-    video: "🎬",
+    video: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.3327 4.6665L10.666 7.99984L15.3327 11.3332V4.6665Z" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.33268 3.3335H1.99935C1.26297 3.3335 0.666016 3.93045 0.666016 4.66683V11.3335C0.666016 12.0699 1.26297 12.6668 1.99935 12.6668H9.33268C10.0691 12.6668 10.666 12.0699 10.666 11.3335V4.66683C10.666 3.93045 10.0691 3.3335 9.33268 3.3335Z" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     text: "📝",
     quiz: "❓",
     quiz_wheel: "🎡",
     quiz_choice: "✅",
     pause: "☕",
-    aufgabe: "📋",
+    aufgabe: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.33398 2.66699H2.66732C2.3137 2.66699 1.97456 2.80747 1.72451 3.05752C1.47446 3.30756 1.33398 3.6467 1.33398 4.00033V13.3337C1.33398 13.6873 1.47446 14.0264 1.72451 14.2765C1.97456 14.5265 2.3137 14.667 2.66732 14.667H12.0007C12.3543 14.667 12.6934 14.5265 12.9435 14.2765C13.1935 14.0264 13.334 13.6873 13.334 13.3337V8.66699" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.334 1.66617C12.5992 1.40095 12.9589 1.25195 13.334 1.25195C13.7091 1.25195 14.0688 1.40095 14.334 1.66617C14.5992 1.93138 14.7482 2.29109 14.7482 2.66617C14.7482 3.04124 14.5992 3.40095 14.334 3.66617L8.00065 9.9995L5.33398 10.6662L6.00065 7.9995L12.334 1.66617Z" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     basiskarte: "🃏",
-    checkliste: "✓",
-    checklist: "✓",
+    checkliste: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3327 4L5.99935 11.3333L2.66602 8" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    checklist: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3327 4L5.99935 11.3333L2.66602 8" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     audio: "🎧",
-    reflection: "💭",
+    reflection: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.33398 2.66699H2.66732C2.3137 2.66699 1.97456 2.80747 1.72451 3.05752C1.47446 3.30756 1.33398 3.6467 1.33398 4.00033V13.3337C1.33398 13.6873 1.47446 14.0264 1.72451 14.2765C1.97456 14.5265 2.3137 14.667 2.66732 14.667H12.0007C12.3543 14.667 12.6934 14.5265 12.9435 14.2765C13.1935 14.0264 13.334 13.6873 13.334 13.3337V8.66699" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.334 1.66617C12.5992 1.40095 12.9589 1.25195 13.334 1.25195C13.7091 1.25195 14.0688 1.40095 14.334 1.66617C14.5992 1.93138 14.7482 2.29109 14.7482 2.66617C14.7482 3.04124 14.5992 3.40095 14.334 3.66617L8.00065 9.9995L5.33398 10.6662L6.00065 7.9995L12.334 1.66617Z" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     fazit: "📊",
     abschluss: "🎓",
     welcome: "👋",

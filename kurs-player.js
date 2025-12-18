@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <div class="lektion-nav-title">${lesson.title}</div>
             <div class="lektion-nav-meta">
               <span class="lektion-nav-type-icon">${typeIcons[lesson.lesson_type] || "📄"}</span>
-              <span>${lesson.duration_minutes ? lesson.duration_minutes + " Min" : ""}</span>
+              <span>${lesson.duration_minutes ? "• " + lesson.duration_minutes + " Min" : ""}</span>
             </div>
           </div>
         `;
@@ -583,12 +583,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("lektion-title").textContent = lesson.title;
 
-    document.getElementById("lektion-type-icon").textContent =
+    document.getElementById("lektion-type-icon").innerHTML =
       typeIcons[lesson.lesson_type] || "📄";
     document.getElementById("lektion-type-label").textContent =
       typeLabels[lesson.lesson_type] || "Lektion";
     document.getElementById("lektion-duration-label").textContent =
-      lesson.duration_minutes ? `${lesson.duration_minutes} Min` : "";
+      lesson.duration_minutes ? `• ${lesson.duration_minutes} Min` : "";
     // Pause-Lektionen aus der Zählung ausschließen
     const countableLessons = allLessons.filter(l => l.lesson_type !== "pause");
     const currentCountableIndex = countableLessons.findIndex(l => l.id === lesson.id);

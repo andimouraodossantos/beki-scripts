@@ -773,30 +773,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (lesson.video_fields) {
       try {
         let fields = lesson.video_fields;
-        
-        // Falls String, parsen
-        if (typeof fields === "string") {
-          fields = JSON.parse(fields);
-        }
-        
-        // Sicherstellen dass es ein Array ist
-        if (!Array.isArray(fields)) {
-          fields = [fields];
-        }
+        if (typeof fields === "string") fields = JSON.parse(fields);
+        if (!Array.isArray(fields)) fields = [fields];
         
         if (fields.length > 0) {
-          // Gespeicherte Antworten laden
           const savedResponses = await loadAufgabeResponses(lesson.id);
 
           fields.forEach((field, index) => {
-            // Unterstütze sowohl "question" als auch "label"
+            // HTML-Block direkt einfügen
+            if (field.html) {
+              content += field.html;
+              return;
+            }
+            // Textarea-Feld
             const fieldLabel = field.question || field.label;
-            
             if (field && fieldLabel) {
-              // Gespeicherte Antwort finden
               const savedAnswer = savedResponses.find(r => r.question === fieldLabel);
               const answerValue = savedAnswer ? savedAnswer.answer : "";
-
               content += `
                 <div class="aufgabe-field video-field">
                   <label class="field-label">${fieldLabel}</label>
@@ -904,10 +897,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         : lesson.aufgabe_fields;
 
       fields.forEach((field, index) => {
-        // Gespeicherte Antwort finden
+        // HTML-Block direkt einfügen
+        if (field.html) {
+          content += field.html;
+          return;
+        }
+        // Textarea-Feld
         const savedAnswer = savedResponses.find(r => r.question === field.question);
         const answerValue = savedAnswer ? savedAnswer.answer : "";
-
         content += `
           <div class="aufgabe-field">
             <h3>${field.question}</h3>
